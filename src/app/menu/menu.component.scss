@@ -54,15 +54,20 @@
               margin: rem(6) 0;
             }
           }
-          .cart-icon {
-            width: var(--font-lg);
-            fill: var(--main-color);
-            cursor: pointer;
+          button {
+            border: none;
+            background-color: transparent;
+            .cart-icon {
+              width: var(--font-lg);
+              fill: var(--main-color);
+              cursor: pointer;
 
-            &:hover {
-              fill: var(--text-color);
+              &:hover {
+                fill: var(--text-color);
+              }
             }
           }
+
         }
       }
 

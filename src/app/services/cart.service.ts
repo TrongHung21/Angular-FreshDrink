@@ -9,10 +9,10 @@ import {CartDrink} from "../shared/CartDrink";
 export class CartService {
   private cart:Cart = new Cart();
   addToCart(drink:Drinks): void {
-    console.log(drink);
+
     let cartItem = this.cart.items.find(item => item.drink.id === drink.id)
     if (cartItem) {
-      this.changeQuantity(drink.id, cartItem.quantity+1);
+      this.changeQuantity(cartItem.quantity+1, drink.id );
       return;
     }
     this.cart.items.push(new CartDrink(drink));
