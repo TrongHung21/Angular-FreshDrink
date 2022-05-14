@@ -1,0 +1,37 @@
+// up > 640px, 1150px, 1400px
+
+$sm-up: 40em;
+$md-up: 71.875em;
+$lg-up: 87.5em;
+
+$breakpoint-up: (
+    'small': $sm-up,
+    'medium': $md-up,
+    'large': $lg-up
+);
+
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoint-up, $size)) {
+        @content;
+    }
+}
+
+// down < 639px, 1149px, 1400px
+$sm-down: 39.9375em;
+$md-down: 71.8125em;
+$lg-down: 87.4375em;
+
+$breakpoint-down: (
+    'small': $sm-down,
+    'medium': $md-down,
+    'large': $lg-down
+);
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoint-down, $size)) {
+        @content;
+    }
+}
+
+

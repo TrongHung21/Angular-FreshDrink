@@ -1,0 +1,67 @@
+@use "src/scss/util" as *;
+
+.intro {
+  padding: rem(64) 0;
+  @include breakpoint-down(small) {
+    display: block;
+  }
+  @include  breakpoint-down(large) {
+    padding: rem(32);
+  }
+
+  &-img {
+    width: rem(400);
+    @include  breakpoint-down(large) {
+      flex: 1;
+      width: 40%;
+    }
+    @include  breakpoint-down(small) {
+      width: 100%;
+      margin-top: rem(32);
+    }
+    //border-radius: 30%;
+  }
+
+  &-text {
+    margin-right: rem(32);
+    @include  breakpoint-down(large) {
+      flex: 1;
+    }
+    @include  breakpoint-down(small) {
+      text-align: center;
+    }
+
+    h1 {
+      font-size:rem(72);
+      color: var(--main-color);
+      margin: 0;
+
+
+      @include  breakpoint-down(small) {
+        font-size: var(--font-xlg);
+      }
+    }
+
+    p {
+      margin: rem(32) 0;
+    }
+
+    button {
+      height: rem(60);
+      cursor: pointer;
+      background-color: var(--bg-color);
+      color: var(--main-color);
+      width: rem(180);
+      border: var(--main-color) 2px solid;
+      border-radius: rem(32);
+      font-size: var(--font-med);
+
+      &:hover {
+        opacity: 0.8;
+        background-color: var(--main-color);
+        color: var(--white-color);
+      }
+    }
+
+  }
+}

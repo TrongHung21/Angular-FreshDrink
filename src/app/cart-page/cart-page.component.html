@@ -1,0 +1,37 @@
+<ul class=" container  ">
+  <li class="flex flex-jc-sb flex-ai-c" *ngFor="let cartItem of cart.items">
+    <div>
+      <img [src]="cartItem.drink.imageUrl" [alt]="cartItem.drink.name">
+    </div>
+    <div>
+      <p>
+        {{cartItem.drink.name}}
+      </p>
+    </div>
+    <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <div class="price">
+      {{cartItem.price | currency}}
+    </div>
+    <div class="remove">
+      <button (click)="removeFromCart(cartItem)">remove</button>
+    </div>
+
+  </li>
+  <div class="total ">
+    <div class="quantity">
+      <p>Number of FreshDrink: {{cart.items.length}}</p>
+    </div>
+    <div class="price">
+      <p>Total price: {{cart.totalPrice}} </p>
+    </div>
+    <button>
+      Check Out
+    </button>
+  </div>
+</ul>

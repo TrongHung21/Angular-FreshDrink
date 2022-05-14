@@ -1,0 +1,52 @@
+@use 'src/scss/util' as *;
+
+ul {
+  padding: rem(64) 0;
+  list-style: none;
+
+  li {
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    p {
+      margin: 0 rem(16);
+      color: var(--main-color);
+    }
+
+    select {
+      margin: 0 rem(16);
+    }
+
+    .price {
+      margin: 0 rem(16);
+    }
+
+    .remove {
+      margin: 0 rem(16);
+      color: var(--main-color);
+
+      border-radius: rem(6);
+    }
+  }
+
+  .total {
+    margin-top: rem(24);
+    color: var(--main-color);
+
+    button {
+      cursor: pointer;
+      padding: rem(16);
+      color: var(--main);
+      border: solid 2px var(--main-color);
+      border-radius: 20px;
+
+      &:hover {
+        color: var(--white-color);
+        background-color: var(--main-color);
+      }
+    }
+  }
+}

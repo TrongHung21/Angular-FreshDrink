@@ -1,0 +1,26 @@
+@use "src/scss/util" as *;
+
+.footer {
+  padding: rem(32) 0;
+
+  &-freshfood {
+    flex: 2;
+  }
+  &-us {
+    flex: 1;
+    padding: 0 rem(12);
+    text-align: center;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+  &-sub {
+    flex: 1;
+  }
+
+  h3 {
+    color: var(--main-color);
+    font-size: var(--font-md);
+  }
+}

@@ -1,0 +1,6 @@
+@use "src/scss/util" as *;
+
+.container {
+  max-width: rem(1110);
+  margin: 0 auto;
+}

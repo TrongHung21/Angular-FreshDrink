@@ -1,0 +1,65 @@
+@use "src/scss/util" as *;
+
+header {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: rem(12) 0;
+  box-shadow: 0 4px 4px -2px #ccc;
+
+  h2 {
+    font-size: var(--font-xlg);
+    flex: 1;
+
+    .header-logo {
+      fill: var(--white-color);
+      width: var(--font-xlg);
+    }
+  }
+
+  ul {
+    list-style: none;
+    flex: 1;
+
+    li {
+      padding: 0 rem(24);
+
+      a {
+        position: relative;
+        cursor: pointer;
+        font-size: var(--font-md);
+        font-weight: 400;
+
+        &:after {
+          width: 100%;
+          display: none;
+          content: '';
+          background-color: var(--white-color);
+          height: rem(5);
+          border-radius: rem(5);
+          position: absolute;
+          bottom: -100%;
+          left: 0;
+        }
+
+        &:hover {
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .header-cart {
+    justify-content: flex-end;
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    .cart-icon {
+      cursor: pointer;
+      fill: var(--white-color);
+      width: var(--font-xlg);
+    }
+  }
+
+}

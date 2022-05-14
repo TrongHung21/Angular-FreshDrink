@@ -1,0 +1,27 @@
+@use 'src/scss/util' as *;
+
+.search {
+  position: relative;
+
+  input {
+    width: rem(280);
+    border-radius: rem(32);
+    border: solid rem(2) var(--main-color);
+    padding: rem(12);
+    font-size: var(--font-med);
+  }
+  button {
+    position: absolute;
+    border: none;
+    width: rem(32);
+    height: rem(32);
+    background-color: transparent;
+    cursor: pointer;
+    left: rem(240);
+    top: 25%;
+    .search-icon {
+      fill: var(--main-color);
+    }
+
+  }
+}

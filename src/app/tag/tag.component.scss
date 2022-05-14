@@ -1,0 +1,20 @@
+@use 'src/scss/util' as *;
+
+.menu-filter {
+  list-style: none;
+  padding: 0;
+  li {
+    color: var(--main-color);
+    margin-right: rem(24);
+    padding: rem(6) rem(12);
+    border: var(--main-color) 2px solid;
+    border-radius: rem(24);
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+      background-color: var(--main-color);
+      color: var(--white-color);
+    }
+  }
+}
